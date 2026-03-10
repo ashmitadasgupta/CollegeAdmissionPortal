@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - College Admission Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Merit College</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="registration.html" class="nav-link active">Registration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Student Registration</h1>
+        <p>Fill out the form below to apply for admission</p>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-wrapper">
+                <!-- Form Progress -->
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Personal</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Academic</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Documents</span>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="registrationForm" class="registration-form">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number" required>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dob">Date of Birth <span class="required">*</span></label>
+                                <input type="date" id="dob" name="dob" required>
+                                <span class="error-message" id="dobError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender <span class="required">*</span></label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message" id="genderError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address <span class="required">*</span></label>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+                            <span class="error-message" id="addressError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City <span class="required">*</span></label>
+                                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                                <span class="error-message" id="cityError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State <span class="required">*</span></label>
+                                <select id="state" name="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                    <option value="telangana">Telangana</option>
+                                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                                    <option value="west-bengal">West Bengal</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message" id="stateError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pincode">PIN Code <span class="required">*</span></label>
+                                <input type="text" id="pincode" name="pincode" placeholder="Enter 6-digit PIN code" required>
+                                <span class="error-message" id="pincodeError"></span>
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Academic Information -->
+                    <div class="form-step" data-step="2">
+                        <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                        <div class="form-group">
+                            <label for="program">Program Applied For <span class="required">*</span></label>
+                            <select id="program" name="program" required>
+                                <option value="">Select Program</option>
+                                <optgroup label="Undergraduate">
+                                    <option value="btech-cse">B.Tech in Computer Science</option>
+                                    <option value="btech-ece">B.Tech in Electronics</option>
+                                    <option value="btech-mech">B.Tech in Mechanical</option>
+                                    <option value="btech-civil">B.Tech in Civil</option>
+                                    <option value="mbbs">MBBS</option>
+                                    <option value="bba">BBA</option>
+                                    <option value="bsc-cs">B.Sc Computer Science</option>
+                                    <option value="ba">Bachelor of Arts</option>
+                                    <option value="llb">LLB</option>
+                                </optgroup>
+                                <optgroup label="Postgraduate">
+                                    <option value="mtech-cs">M.Tech Computer Science</option>
+                                    <option value="mba">MBA</option>
+                                    <option value="msc-ds">M.Sc Data Science</option>
+                                </optgroup>
+                                <optgroup label="Diploma">
+                                    <option value="diploma-web">Diploma in Web Development</option>
+                                    <option value="diploma-network">Diploma in Networking</option>
+                                    <option value="diploma-design">Diploma in Graphic Design</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-message" id="programError"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prevSchool">Previous School/College <span class="required">*</span></label>
+                                <input type="text" id="prevSchool" name="prevSchool" placeholder="Enter your previous institution name" required>
+                                <span class="error-message" id="prevSchoolError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="prevBoard">Previous Board/University <span class="required">*</span></label>
+                                <input type="text" id="prevBoard" name="prevBoard" placeholder="Enter board/university name" required>
+                                <span class="error-message" id="prevBoardError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="passingYear">Passing Year <span class="required">*</span></label>
+                                <select id="passingYear" name="passingYear" required>
+                                    <option value="">Select Year</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                </select>
+                                <span class="error-message" id="passingYearError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="percentage">Percentage/CGPA <span class="required">*</span></label>
+                                <input type="text" id="percentage" name="percentage" placeholder="Enter your percentage or CGPA" required>
+                                <span class="error-message" id="percentageError"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="entranceExam">Entrance Exam (if applicable)</label>
+                                <select id="entranceExam" name="entranceExam">
+                                    <option value="">Not Applicable</option>
+                                    <option value="jee">JEE Main</option>
+                                    <option value="neet">NEET</option>
+                                    <option value="cat">CAT</option>
+                                    <option value="gate">GATE</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="entranceRank">Entrance Exam Rank/Score</label>
+                                <input type="text" id="entranceRank" name="entranceRank" placeholder="Enter your rank or score">
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Document Upload -->
+                    <div class="form-step" data-step="3">
+                        <h3><i class="fas fa-file-upload"></i> Document Upload</h3>
+                        <p class="form-note">Please upload the following documents. Maximum file size: 2MB each. Allowed formats: PDF, JPG, PNG.</p>
+                        
+                        <div class="form-group">
+                            <label for="photo">Passport Size Photo <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" id="photo" name="photo" accept="image/*" required>
+                                <div class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload or drag and drop</span>
+                                </div>
+                            </div>
+                            <span class="error-message" id="photoError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="marksheet">10th/12th Marksheet <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" id="marksheet" name="marksheet" accept=".pdf,image/*" required>
+                                <div class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload or drag and drop</span>
+                                </div>
+                            </div>
+                            <span class="error-message" id="marksheetError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="idProof">ID Proof (Aadhar/PAN) <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" id="idProof" name="idProof" accept=".pdf,image/*" required>
+                                <div class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload or drag and drop</span>
+                                </div>
+                            </div>
+                            <span class="error-message" id="idProofError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signature">Signature <span class="required">*</span></label>
+                            <div class="file-upload">
+                                <input type="file" id="signature" name="signature" accept="image/*" required>
+                                <div class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload or drag and drop</span>
+                                </div>
+                            </div>
+                            <span class="error-message" id="signatureError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="declaration" name="declaration" required>
+                            <label for="declaration">I hereby declare that all the information provided by me is true and correct to the best of my knowledge. <span class="required">*</span></label>
+                            <span class="error-message" id="declarationError"></span>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section class="important-dates-section">
+        <div class="container">
+            <h2 class="section-title">Important Dates</h2>
+            <div class="dates-grid">
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="date-info">
+                        <h4>Application Start</h4>
+                        <p class="date">January 15, 2025</p>
+                        <span class="status active">Open</span>
+                    </div>
+                </div>
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <div class="date-info">
+                        <h4>Application Deadline</h4>
+                        <p class="date">March 31, 2025</p>
+                        <span class="status upcoming">Upcoming</span>
+                    </div>
+                </div>
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="date-info">
+                        <h4>Entrance Exam</h4>
+                        <p class="date">April 15, 2025</p>
+                        <span class="status upcoming">Upcoming</span>
+                    </div>
+                </div>
+                <div class="date-card">
+                    <div class="date-icon">
+                        <i class="fas fa-list-alt"></i>
+                    </div>
+                    <div class="date-info">
+                        <h4>Results</h4>
+                        <p class="date">May 1, 2025</p>
+                        <span class="status upcoming">Upcoming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Need Help?</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Call Us</h4>
+                    <p>+91 1800-123-4567</p>
+                    <p>Mon-Sat, 9AM-6PM</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>admissions@meritcollege.edu</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Visit Us</h4>
+                    <p>123 Education Street</p>
+                    <p>Knowledge City - 600001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Modal -->
+    <div class="modal-overlay" id="notificationModal">
+        <div class="modal">
+            <div class="modal-icon success" id="modalIcon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Registration Successful!</h3>
+            <p id="modalMessage">Your application has been submitted successfully. You will receive a confirmation email shortly.</p>
+            <div class="modal-details" id="modalDetails">
+                <p><strong>Application ID:</strong> <span id="applicationId">MC2025XXXX</span></p>
+            </div>
+            <button class="btn btn-primary" id="modalClose">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Merit College</h3>
+                    <p>Excellence in Education since 1975. Committed to nurturing future leaders through quality education and holistic development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Knowledge City</li>
+                        <li><i class="fas fa-phone"></i> +91 1800-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> admissions@meritcollege.edu</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Student Project Details -->
+            <div class="student-details">
+                <h4>Project Developed By</h4>
+                <div class="student-info">
+                    <p><strong>Name:</strong> Ashmita Dasgupta</p>
+                    <p><strong>Registration Number:</strong> 24BCT0321</p>
+                    <p><strong>College Name:</strong> Vellore Institute of Technology (Vellore)</p>
+                    <p><strong>Guided by:</strong> Raparthi Yaswanth</p>
+                    <p><strong>School:</strong> SCOPE</p>
+                    <p><strong>Course:</strong> Computer Science and Engineering with specialization Internet of Things (B.Tech)</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Merit College Admission Portal. All Rights Reserved.</p>
+                <p>This is a university project developed for educational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

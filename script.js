@@ -1,10 +1,4 @@
-/**
- * COLLEGE ADMISSION PORTAL - JAVASCRIPT
- * Developed by: Ashmita Dasgupta
- * Registration Number: 24BCT0321
- * College: Vellore Institute of Technology (Vellore)
- * Course: B.Tech CSE with specialization in Internet of Things
- */
+
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
